@@ -1,0 +1,33 @@
+.revenue {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: .6rem;
+    gap: .8rem;
+    border-radius: 10px;
+    width: 600px;
+    margin-top: 2rem;
+    @media(max-width: 655px) {
+        width: 93%;
+        margin-top: 1rem;
+    }
+    @media(max-width: 530px) {
+        flex-direction: column;
+    }
+    div {
+        background-color:  rgb(150, 213, 255);
+        border-radius: 10px;    
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        flex-direction: column;
+        h2 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+    }
+}

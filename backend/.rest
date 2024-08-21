@@ -1,0 +1,15 @@
+POST http://localhost:4000/expenses
+Content-Type: application/json
+
+###
+
+GET http://localhost:4000/expenses
+
+###
+
+DELETE http://localhost:4000/expenses/:id
+
+###
+
+PUT http://localhost:4000/expenses/:id
+Content-Type: application/json

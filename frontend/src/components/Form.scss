@@ -1,0 +1,102 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  padding: 1.5rem;
+  border-radius: 20px;
+  gap: 1.8rem;
+  text-align: center;
+  @media (max-width: 1100px) {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2rem;
+    @media (max-width: 300px) {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 655px) {
+    gap: 1rem;
+  }
+  @media (max-width: 410px) {
+    width: 90%;
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem;
+    @media (max-width: 655px) {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 0.5rem 0.8rem;
+      border-radius: 5px;
+      border: none;
+      background-color: rgb(88, 188, 255);
+      transition: 0.4s;
+      @media (max-width: 655px) {
+        width: 100%;
+      }
+      &:hover {
+        background-color: #489de7;
+      }
+    }
+
+    select {
+      padding: 0.5rem 0.8rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      background-color: #e0e0e0;
+      transition: 0.4s;
+      @media (max-width: 655px) {
+        width: 100%;
+      }
+      &:hover {
+        background-color: #dad5d5;
+      }
+    }
+
+    .custom-datepicker {
+      width: 100px;
+
+      @media (max-width: 655px) {
+        width: 100% !important;
+      }
+    }
+
+    input {
+      width: 100%;
+      border-radius: 5px;
+      padding: 0.5rem 0.8rem;
+      border: 1px solid #ccc;
+
+      &:hover {
+        border-color: #aaa;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      &:focus {
+        border-color: #337ab7;
+        box-shadow: 0 0 2px #337ab7;
+      }
+
+      &::placeholder {
+        color: #999;
+      }
+
+      &.invalid {
+        border-color: red;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+      }
+    }
+  }
+}
