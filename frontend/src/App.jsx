@@ -1,6 +1,6 @@
-import Costs from './components/Costs'
-import Form from './components/Form'
-import Revenue from './components/Revenue'
+import Costs from './components/Costs/Costs'
+import Form from './components/Form/Form'
+import Revenue from './components/Revenue/Revenue'
 import './index.css'
 
 import { useState } from 'react'

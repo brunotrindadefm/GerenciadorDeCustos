@@ -1,15 +1,15 @@
-POST http://localhost:4000/expenses
+POST http://localhost:4000/api/expenses
 Content-Type: application/json
 
 ###
 
-GET http://localhost:4000/expenses
+GET http://localhost:4000/api/expenses
 
 ###
 
-DELETE http://localhost:4000/expenses/:id
+DELETE http://localhost:4000/api/expenses/:id
 
 ###
 
-PUT http://localhost:4000/expenses/:id
+PUT http://localhost:4000/api/expenses/:id
 Content-Type: application/json
