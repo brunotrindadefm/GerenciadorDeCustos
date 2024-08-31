@@ -78,10 +78,10 @@ const Costs = ({ onNewData, onDeleteData, onEditData }) => {
     }).format(amount);
   };
 
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  return format(date, 'dd/MM/yyyy');
-};
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return format(date, 'dd/MM/yyyy');
+  };
 
   useEffect(() => {
     getRevenues();
@@ -92,15 +92,16 @@ const formatDate = (dateString) => {
       <div className='container'>
         {revenues && revenues.map((revenue) => (
           <div key={revenue.id} className='container-item'>
-            <h3>{revenue.category}</h3>
-            <h5>{revenue.type === 'expense' ? 'Despesas' : 'Renda'}</h5>
-            <p className='description'>{revenue.description}</p>
-            <p>{formatDate(revenue.date)}</p>
-            <h4>{formatCurrency(revenue.value)}</h4>
             <div className='edit-del'>
               <p onClick={() => handleEdit(revenue)}><FaRegEdit /></p>
+              <h3>{revenue.category}</h3>
               <p onClick={() => deleteRevenue(revenue.id)}><MdDeleteForever /></p>
             </div>
+            <h5>{revenue.type === 'expense' ? 'Despesas' : 'Renda'}</h5>
+            <p>{formatDate(revenue.date)}</p>
+            <h4>{formatCurrency(revenue.value)}</h4>
+            <p className='description'>{revenue.description}</p>
+
             {edit && edit.id === revenue.id && (
               <div className='edit'>
                 <form onSubmit={(e) => handleSaveChanges(e, edit)} className='form'>
